@@ -162,8 +162,20 @@ footer input[type="text"], footer input[type="email"],footer textarea{
 
 }
 @media screen and (max-width:576px) {
-    .skill-container,.about-items,.resume-container,footer{
+    .skill-container,.about-items,.resume-container,footer,.banner,nav,nav>ul{
         flex-direction: column;
+    }
+    nav>ul{
+        gap: 20px;
+    }
+    .banner{
+        margin: 20px;
+    }
+    .header{
+        background-image: none;
+    }
+    .banner-picture{
+        width: 100%;
     }
     footer{
         padding: 20px;
@@ -174,4 +186,27 @@ footer input[type="text"], footer input[type="email"],footer textarea{
     .aboutme{
         padding: 10px;
     }
+}
+
+@media screen and (min-width:577px) and (max-width:992px) {
+   .banner{
+    flex-direction: column;
+    
+   } 
+   .skill-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 10px;
+   }
+   .resume-container{
+    padding: 10px;
+   }
+   footer{
+    padding: 10px;
+    gap: 30px;
+   }
+    footer input[type="text"], footer input[type="email"],footer textarea{
+     width: calc(100% - 50px);
+    }
+   
 }
